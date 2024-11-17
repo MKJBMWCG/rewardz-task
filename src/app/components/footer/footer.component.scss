@@ -1,0 +1,32 @@
+.container{
+    .logo{
+        padding: 5px;
+        img {
+            height: 57px;
+            width: 54px;
+            background: white;
+            border-radius: 10px;
+        }
+    
+    }
+    .footer__title {
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    .footer__desc{
+        color: #ababab;
+    }
+    ul{
+        padding: 0px;
+        li{
+            list-style: none;
+            color: #ababab;
+        }
+    }
+    .copy__rights {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+

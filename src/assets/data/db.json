@@ -1,0 +1,95 @@
+[
+    {   "id":1,
+        "pk": 987,
+        "name": "Camera",
+        "points": 28,
+        "display_img_url": "../assets/images/camera.jpg",
+        "quantity": 14,
+        "valid_until": "2024-12-31T00:00:00",
+        "low_quantity": 10
+        },
+        {  
+            "id":2,
+            "pk": 987,
+            "name": "Honey",
+            "points": 60,
+            "display_img_url": "../assets/images/Honey.jpg",
+            "quantity": 14,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+            },
+            
+        {  
+            "id":3,
+            "pk": 987,
+            "name": "Drink",
+            "points": 150,
+            "display_img_url": "../assets/images/Drink.jpg",
+            "quantity": 14,
+            "valid_until": "2024-02-31T00:00:00",
+            "low_quantity": 10
+            },
+            
+        {  
+            "id":4,
+            "pk": 987,
+            "name": "Phone Cover",
+            "points": 200,
+            "display_img_url": "../assets/images/Phone Cover.jpg",
+            "quantity": 14,
+            "valid_until": "2025-02-31T00:00:00",
+            "low_quantity": 10
+            },
+            {  
+            "id":5,
+            "pk": 987,
+            "name": "Charger",
+            "points": 22,
+            "display_img_url": "../assets/images/charger.jpg",
+            "quantity": 3,
+            "valid_until": "2027-11-31T00:00:00",
+            "low_quantity": 10
+            },
+            {  
+            "id":6,
+            "pk": 987,
+            "name": "Head Phones",
+            "points": 67,
+            "display_img_url": "../assets/images/Phones.jpg",
+            "quantity": 0,
+            "valid_until": "2030-08-31T00:00:00",
+            "low_quantity": 10
+            },
+            {  
+            "id":7,
+            "pk": 987,
+            "name": "Chocolate",
+            "points": 0,
+            "display_img_url": "",
+            "quantity": 14,
+            "valid_until": "2035-12-31T00:00:00",
+            "low_quantity": 10
+            },
+            {  
+            "id":8,
+            "pk": 987,
+            "name": "Head Phones",
+            "points": 3,
+            "display_img_url": "../assets/images/head phones.jpg",
+            "quantity": 5,
+            "valid_until": "2088-09-31T00:00:00",
+            "low_quantity": 10
+            },
+            {  
+            "id":9,
+            "pk": 987,
+            "name": "Watch",
+            "points": 345,
+            "display_img_url": "../assets/images/watch.jpg",
+            "quantity": 14,
+            "valid_until": "2027-07-31T00:00:00",
+            "low_quantity": 10
+            }
+            
+        
+]

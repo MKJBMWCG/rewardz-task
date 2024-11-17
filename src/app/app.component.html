@@ -1,0 +1,112 @@
+<app-header></app-header>
+ <!-- Main section -->
+ 
+ 
+
+ <mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
+    <div class="filter__header">
+      <div class="filterBy">
+      <p>Filter By</p>
+      </div>
+      <div class="resetall">
+        <button class="btn btn-primary">Reset All</button>
+      </div>
+    </div>
+    <div class="sorting">
+      <div><button [ngClass]="{'active':atozActive}" (click)="accendingOrder('asc')" class="sort__btn">A to Z</button></div>
+      <div><button [ngClass]="{'active':ztoaActive}"  (click)="desccending('desc')" class="sort__btn">Z to A</button></div>
+     
+    </div>
+    <div class="apply">
+      <button (click)="applyFilter()">Apply</button>
+    </div>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <!-- <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button> -->
+    <div class="container-fluied main__content">
+      <div class="container">
+        <section class="search">
+          <h2>Search</h2>
+          <div class="col-md-12">
+            <div class="input-group mb-3">
+              <span class="input-group-text"> <mat-icon  class="language_icon">search</mat-icon></span>
+              <input type="text" class="form-control" placeholder="Search" >
+            </div>
+            <div class="applied__filter">
+              <div class="applied__filter__title"><p>applied Filters: </p></div>
+              <div class="chip__set">   <mat-chip-set>
+                <mat-chip disabled="true">e-Voucher</mat-chip>
+                <mat-chip disabled="true">Products</mat-chip>
+              </mat-chip-set></div> 
+           </div>
+          </div>
+        </section>
+        <section class="result">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <aside class="aside">
+                  <div class="categories">
+                    <h6>Categories</h6>
+                    @for(item of categoriesArray; track item.id){
+                      <div class="categories__card">
+                        <div class="card__title">
+                        <div> <mat-icon >{{item.icon_arrow}}</mat-icon></div>
+                        <div><span>{{item.title}}</span></div>
+                        </div>
+                        <div ><mat-icon [ngClass]="{'circle__icon': item.title =='e-Voucher'}">{{item.icon_check}}</mat-icon></div>
+                     </div> 
+                    }
+                  </div>
+                 
+                </aside>
+            </div>
+            <!-- main-result -->
+             <div class="col-md-9 col-sm-6 overflow">
+              <div class="product__details">
+                <div class="products_count"><p>{{productsDetails.length}} Results Found</p></div>
+                <div class="sort__btn"><button class="btn btn-primary color" (click)="drawer.toggle()">Sort</button></div>
+              </div>
+             <div class="row">
+              @for(item of productsDetails; track item.id){
+                <div class="col-md-4 col-sm-12 mb-2">
+                  <mat-card class="product-card" appearance="outlined">
+                    <img mat-card-image src="{{item.display_img_url ? item.display_img_url : '../assets/images/placeholder.jpg'}}" alt="image">
+                    
+                     <div class="product_info">
+                      @if(item.quantity !==0 && item.quantity <=item.low_quantity ){
+                        <span class="high__demand">ON HIGH DEMAND</span><br>
+                        <span >(only {{item.quantity}} Rewards left)</span><br>
+                      }
+                      @if(item.quantity==0){
+                        <span >(Out of Stock)</span>
+                      }
+                      
+                     </div>
+                    <mat-card-content>
+                      <p class="card_title">{{item.name}}</p>
+                      <p class="points">{{item.points}} Points</p>
+                      <div class="valid">
+                      <span class="valid__title">Valid Until </span><span>{{item.valid_until | date}}</span>
+                      </div>
+                    </mat-card-content>
+                  </mat-card>
+                </div>
+              }
+             </div>
+             </div>
+          </div>
+        </section>
+       </div>
+     </div>
+  </div>
+
+</mat-drawer-container>
+
+
+
+ <!-- footer -->
+  <app-footer></app-footer>
