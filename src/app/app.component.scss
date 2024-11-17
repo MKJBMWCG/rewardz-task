@@ -202,7 +202,10 @@ button.sort__btn {
 }
 
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:769px) {
+    .mat-drawer {
+        width: 100%;
+    }
     aside.aside {
         margin-bottom: 20px;
     }
